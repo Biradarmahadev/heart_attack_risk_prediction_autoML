@@ -165,7 +165,4 @@ best_pipeline.score(X_test, y_test, objectives=["auc","f1","Precision","Recall"]
 ### Result
 **We got an 91.2 % AUC Score which is the highest of all**
 
-## Feedback
-:person_in_tuxedo: Feel free to send me feedback on [Telegram](https://t.me/boramorka). Feature requests are always welcome. 
 
-:abacus: [Check my other projects.](https://github.com/boramorka)
