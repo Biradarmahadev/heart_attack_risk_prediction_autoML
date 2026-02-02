@@ -59,6 +59,37 @@ Link: https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-p
 
 ![pic](https://github.com/boramorka/usercontent/blob/main/heart-risk/Screenshot_1.png?raw=true)
 
+
+## 🧠 Machine Learning & Data Science Workflow
+
+```mermaid
+graph TB
+    %% ===== Styling =====
+    classDef data fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe,rx:8px
+    classDef process fill:#020617,stroke:#22c55e,stroke-width:2px,color:#dcfce7,rx:8px
+    classDef model fill:#1e1b4b,stroke:#a78bfa,stroke-width:2px,color:#ede9fe,rx:8px
+    classDef eval fill:#2e1065,stroke:#f472b6,stroke-width:2px,color:#fce7f3,rx:8px
+    classDef deploy fill:#451a03,stroke:#facc15,stroke-width:2px,color:#fef9c3,rx:8px
+
+    %% ===== Flow =====
+    A[Dataset - Heart Attack Kaggle]:::data --> B[Data Cleaning - Missing Values, Encoding]:::process
+    B --> C[Exploratory Data Analysis - Correlations, Distributions]:::process
+    C --> D[Feature Selection and Scaling]:::process
+
+    D --> E[Manual ML Models - LR, DT, RF, KNN, SVM, AdaBoost]:::model
+    E --> F[Model Evaluation - Confusion Matrix, ROC, Recall]:::eval
+
+    D --> G[AutoML - EvalML]:::model
+    G --> H[Pipeline Search and Optimization]:::model
+    H --> I[Best Model Selection - Max AUC, Recall, F1]:::eval
+
+    F --> J[Final Comparison - Manual vs AutoML]:::eval
+    I --> J
+
+    J --> K[Final Model - 91.2 Percent AUC]:::deploy
+
+```
+
 ## EDA
 
 ### Correlations in data
